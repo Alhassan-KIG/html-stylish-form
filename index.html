@@ -6,8 +6,106 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
     <title>Stylish Form</title>
+    <style>
+      html {
+        background: linear-gradient(to left, rgb(183, 103, 194) 35%, rgb(146, 103, 214) 40%);
+        animation: ani 5s infinite linear;
+      }
+
+      body {
+        justify-content: space-evenly;
+        border: solid white;
+        background-color: white;
+        padding: 10px;
+        margin: 10% 25% 10% 25%;
+        border-radius: 20px;
+      }
+
+      label {
+        margin-bottom: 10px;
+      }
+
+      @font-face {
+        font-family: "Quicksand-VariableFont_wght";
+        src: url("Quicksand-VariableFont_wght.ttf") format("truetype");
+      }
+
+      header {
+        text-align: center;
+        font-family: "Quicksand-VariableFont_wght";
+      }
+
+      input {
+        display: block;
+        font-size: 15px;
+      }
+
+      #name {
+        font-size: 20px;
+      }
+
+      body #submit {
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 10px 150px;
+        margin: 20px 150px;
+        color: white;
+        background: linear-gradient(to right, rgb(183, 103, 194) 35%, rgb(146, 103, 214) 40%);
+        animation: ani 5s infinite linear;
+      }
+
+      @media (max-width: 780px) {
+        body #submit {
+          padding: 10px 100px;
+          margin: 10px 0px
+        }}
+    </style>
   </head>
   <body>
-
+    <header><h1>Say Hello!</h1></header>
+    <form>
+      <label id="name" for="firstName"><h3>Your Name</h3></label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="Enter your name"
+        minlength="5"
+        maxlength="20"
+      />
+      <label>
+        <h2>Email</h2>
+        <input
+          id="email"
+          type="email"
+          name="userEmail"
+          required
+          placeholder="Enter your email address"
+        />
+      </label>
+      <label>
+        <h2>Needed Services</h2>
+        <select name="Choose Services">
+        <option>Full Year Service</option>
+        <option>Semi Annual Service</option>
+        <option>Quarterly Service</option>
+      </select>
+      </label>
+      <label>
+        <h2>Select Budget</h2>
+        <input
+        id="budget"
+        type="number"
+        name="Select Budget"
+        required
+        placeholder="Budget"/>
+      </label>
+      <label>
+        <p><h2>Message</h2></p>
+        <textarea name="bio" placeholder="Your message here.."></textarea>
+      </label>
+      <label>
+      <input id="submit" type="submit" value="Submit!" /></label>
+    </form>
   </body>
 </html>
