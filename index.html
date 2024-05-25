@@ -66,21 +66,22 @@
     <form>
       <label id="name" for="firstName"><h3>Your Name</h3></label>
       <input
+      required
         type="text"
         name="firstName"
         id="firstName"
         placeholder="Enter your name"
         minlength="5"
-        maxlength="20"
+        maxlength="20"        
       />
       <label>
         <h2>Email</h2>
         <input
+        required
           id="email"
           type="email"
           name="userEmail"
-          required
-          placeholder="Enter your email address"
+          placeholder="Enter your email address"          
         />
       </label>
       <label>
@@ -94,6 +95,7 @@
       <label>
         <h2>Select Budget</h2>
         <input
+        required
         id="budget"
         type="number"
         name="Select Budget"
@@ -104,7 +106,7 @@
         <p><h2>Message</h2></p>
         <textarea name="bio" placeholder="Your message here.."></textarea>
       </label>
-      <label> <button type="button" onclick="location.href='submit!.html'">Submit!
+      <label> <button type="submit" onclick="location.href='submit!.html'">Submit!
       </label>
     </form>
   </body>
